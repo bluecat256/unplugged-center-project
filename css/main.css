@@ -138,108 +138,109 @@ p {
 	line-height: 1.285em;	
 }
 
-/*
 img {
- 
+	width: 100%;
 }
  
 figure {
- 
+	margin: 0;
 }
- */
+
 address {
 	font-style: normal;
 }
  
 .content-wrapper {
-  width: 90%;
-  margin: 50px 0;
+	width: 90%;
+	margin: 50px 0;
 }
 
 /* header and footer styles */
 
 header,
 footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: row wrap;
-  background-color: #202322;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
+	background-color: #202322;
 }
 
 /* header */
 
 header {
-  padding: 15px 0;
+	padding: 15px 0;
 }
 
 header .content-wrapper{
   /* 320/360 = 89% between the blue lines on the comp */
   /* this one is in the .content-wrapper without header */
   /* width: 89%; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: row wrap;
-  margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
+	margin: 0;
 }
 
-/*
 header figure {
-
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
 }
-*/
 
 .header-divider {
   /* this horizontal rule goes all the way across the comp */
-  width: 100%;
-  height: 1px;
-  margin: 10px 0 20px 0;
-  background: #3a3a3a; 
+	width: 100%;
+	height: 1px;
+  	margin: 10px 0 20px 0;
+  	background: #3a3a3a; 
 }
 
 header nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: row wrap;
-  width: 60%;
-  font-size: 1.125em;
-  font-weight: 700;
-  text-transform: uppercase;
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
+  	flex-flow: row wrap;
+  	width: 60%;
+  	font-size: 1.125em;
+  	font-weight: 700;
+  	text-transform: uppercase;
 }
 
 header nav ul {
-  /* between the blue lines closest to the 2 parts of the ul, 160/360 = 44% */
-  /* width: 44%; */
-  /* above is wrong, is actually: */
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
+  	/* between the blue lines closest to the 2 parts of the ul, 160/360 = 44% */
+  	/* width: 44%; */
+  	/* above is wrong, is actually: */
+  	width: 100%;
+  	display: flex;
+  	justify-content: space-around;
 }
 
 header nav ul li {
-  font-size: 1.125em;
+  	font-size: 1.125em;
 }
 
 /* footer */
 
 footer {
-  flex-direction: column;
-  text-align: center;
+  	flex-direction: column;
+  	text-align: center;
 }
 
 footer p {
-  margin: 0;
+  	margin: 0;
 }
 
 footer .content-wrapper {
-  width: 55%;
-  margin: 50px 0;
+  	width: 55%;
+  	margin: 50px 0;
 }
 
 footer .contact {
-  margin-bottom: 50px;
+  	margin-bottom: 50px;
 }
 
 /*
@@ -255,19 +256,19 @@ footer .social {
 */
 
 footer .social-icons {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  	display: flex;
+  	justify-content: space-around;
+  	align-items: center;
 }
 
 footer .social-icons p {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
 }
 
 footer .copyright {
-  margin: 20px 0;
+  	margin: 20px 0;
 }
 
 /* Mobile styles for home page */
@@ -276,28 +277,30 @@ footer .copyright {
 /* hero area and aside */
 
 .hero-area {
-  display: flex;
-  justify-content: center;
-  flex-flow: row wrap;
+	display: flex;
+	justify-content: center;
+	flex-flow: row wrap;
+	background: url('../img/hero-image.jpg') center no-repeat #333;
+	background-size: cover;
 }
 
 .hero-area h1 {
-  font-size: 2.25em;
-  font-family: 'Poppins', Helvetica, Arial, sans-serif;
-  font-weight: 500; 
-  line-height: 1.2; 
+  	font-size: 2.25em;
+  	font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  	font-weight: 500; 
+  	line-height: 1.2; 
 }
 
 aside {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: row wrap;
-  background-color: #527158;
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
+  	flex-flow: row wrap;
+  	background-color: #527158;
 }
 
 aside .form{
-  margin-top: 30px;
+  	margin-top: 30px;
 }
 
 /*
@@ -308,32 +311,34 @@ aside .form{
 
 /*features */
 .features {
-  display: flex;
-  justify-content: center;
-  flex-flow: row wrap;
+	display: flex;
+	justify-content: center;
+ 	flex-flow: row wrap;
+ 	background: url('../img/rawpixel-image.jpg') center no-repeat #333;
+	background-size: cover;
 }
 
 .features h2 {
-  margin-bottom: 60px;
+  	margin-bottom: 60px;
 }
 .features article {
-  width: 63%;
-  margin: 30px 0;
+  	width: 63%;
+  	margin: 30px 0;
 }
 
 .features .features-items {
-  /* text box in PS is 200/360 = 56% */
-  /* wrong */
-  /* width: 56%; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: row wrap;
+  	/* text box in PS is 200/360 = 56% */
+  	/* wrong */
+  	/* width: 56%; */
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
+  	flex-flow: row wrap;
 }
 
 .features p {
-  margin: 0;
-  text-align: center;
+  	margin: 0;
+  	text-align: center;
 }
 /*
 .fontawesome-icon {
@@ -345,73 +350,73 @@ aside .form{
 */
 /* Reviews */
 .reviews {
-  display: flex;
-  justify-content: center;
-  flex-flow: row wrap;
-  background-color: #2a423a;
+  	display: flex;
+  	justify-content: center;
+  	flex-flow: row wrap;
+  	background-color: #2a423a;
 }
 
 .reviews h2 {
-  margin-bottom: 40px;
-  line-height: 1;
+  	margin-bottom: 40px;
+  	line-height: 1;
 }
 
 .reviews h3 {
   /* text box is 320/360=89% */
   /* wrong */
-  width: 55%;
-  margin: 20px 0;
+  	width: 55%;
+  	margin: 20px 0;
 }
 
 /* styles for About page (instead of Home page) */
 .mission {
 	background-color: #527158;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: row wrap;
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
+  	flex-flow: row wrap;
 }
 
 .contact-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: row wrap;
-  background-color: #2a423a;
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
+  	flex-flow: row wrap;
+  	background-color: #2a423a;
 }
 
 .contact-content p {
-  margin: 0;
+  	margin: 0;
 }
 
 /* styles for FAQs page (instead of Home page) */
 .faq {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: row wrap;
-  background-color: #527158;
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
+  	flex-flow: row wrap;
+  	background-color: #527158;
 }
 
 .faq .content-wrapper {
-  margin: 50px 0 0 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: row wrap;
+  	margin: 50px 0 0 0;
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
+  	flex-flow: row wrap;
 }
 
 .faq h2 {
-  margin-bottom: 40px;
-  line-height: 1;
+  	margin-bottom: 40px;
+  	line-height: 1;
 }
 
 .faq-content {
-  margin-bottom: 50px;
+  	margin-bottom: 50px;
 }
 
 .faq-content h4 {
-  line-height: 1.333;
+  	line-height: 1.333;
 }
 
 
@@ -538,6 +543,16 @@ input[type=button] {
   	margin: 100px 0;
   }
 
+  h2 {
+    font-size: 2.25em;
+    line-height: 1.333;
+  }
+
+  h3 {
+      font-size: 1.5em;
+      line-height: 1.25;
+  }
+
   header {
   	justify-content: space-around;
   	padding: 33px 0;
@@ -547,7 +562,11 @@ input[type=button] {
   	width: 100%;
   	justify-content: space-between;
   }
-
+	
+  header figure {
+    width: 30%;
+  }
+  
   header nav {
   	width: 20%;
   }
@@ -559,6 +578,16 @@ input[type=button] {
   .header-divider {
   	display: none
   }
+
+  .hero-area {
+    min-height: 600px;
+  }
+
+  .hero-area h1 {
+    font-size: 3em;
+    line-height: 1;
+    margin: 0;
+	}
 
   aside .content-wrapper {
   	margin: 50px 0;
@@ -573,6 +602,10 @@ input[type=button] {
   	margin: 0;
   }
 
+ .features h2 {
+    margin-bottom: 20px;
+  }
+
   .features article {
   	display: flex;
   	justify-content: center;
@@ -582,7 +615,7 @@ input[type=button] {
   }
 
   .features .features-item-description {
-  	width: 50%;
+  	width: 60%;
   }
 
   .reviews article {
@@ -590,8 +623,18 @@ input[type=button] {
   	justify-content: space-between;
   }
 
+  .reviews h2 {
+    width: 85%;
+  }
+
+  .reviews article figure,
   .reviews article div {
   	width: 50%;
+  }
+
+ .reviews h3 {
+    width: 75%;
+    margin: 0;
   }
 
   footer .content-wrapper {
@@ -599,14 +642,24 @@ input[type=button] {
   	margin: 100px 0;
   }
 
-  .footer-content {
+  footer .footer-content {
   	display: flex;
   	justify-content: space-between;
   	align-items: center;
+  	flex-direction: row;
   }
 
   footer .contact {
   	margin-bottom: 0;
+  }
+
+  footer h4 {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+  }
+
+  footer p {
+      line-height: 1.285;
   }
 
   footer .copyright {
@@ -615,51 +668,84 @@ input[type=button] {
 
 /* about page */
 
-.mission-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-top: 20px
-    }
+  .mission-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px
+  }
   
-    .mission-content p {
-      width: 45%;
-    }
+  .mission-content p {
+    width: 45%;
+  }
   
-    .contact-section .content-wrapper h2 {
-      width: 80%;
-    }
+  .contact-section .content-wrapper h2 {
+    width: 80%;
+  }
   
-    .contact-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-    }
+  .contact-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .contact-content h4 {
+    font-size: 1.5em;
+  }
 
 /* faq page */
 
-    .faq .content-wrapper {
-      justify-content: space-between;
-    }
+  .faq .content-wrapper {
+    justify-content: space-between;
+  }
   
-    .faq-content {
-      flex-basis: 45%;
-    }
+  .faq-content {
+    flex-basis: 45%;
+  }
   
-    .faq h2 {
-      width: 100%;
-    }
+  .faq h2 {
+    width: 100%;
+  }
+  
+  .faq h4,
+  .faq p {
+    font-size: .875em;
+    line-height: 1.125;
+  }
 
 }
 
 @media only screen and (min-width: 1200px) {
   /* desktop styles here */
  	
+  header {
+    padding: 15px 0;
+  }
+  
+  h2 {
+    font-size: 2.25em;
+  }
+
+  h3,
+  h4 {
+    font-size: 1.875em;
+  }
+
+  p {
+    font-size: 1.125em;
+    line-height: 1.333;
+  }
+
+  .hero-area {
+    min-height: 775px;
+  }
+
  	.content-wrapper {
  		max-width: 960px;
  	}
 
  	.hero-area h1 {
+ 		font-size: 3.75em;
  		width: 60%;
  	}
 
@@ -668,10 +754,14 @@ input[type=button] {
  	}
 
  	aside .content-wrapper .form-description,
-  aside .content-wrapper .form {
+ 	aside .content-wrapper .form {
     width: 30%;
-  }
-
+  	}
+	
+	.form-description p {
+    font-size: 1.125em;
+  	}
+  	
   	.features h2 {
   		width: 90%;
   	}
@@ -684,17 +774,35 @@ input[type=button] {
   		width: 42%;
   	}
 
-  	.mission h2 {
-  		width: 95%;
+	.reviews h2 {
+    padding-bottom: 50px;
   	}
 
-  	.contact-section .content-wrapper h2 {
-  		width: 95%
+  	footer h4 {
+    font-size: 1.875em;
   	}
+  	
+  	.mission h2,
+  	.contact-section .content-wrapper h2 {
+  		width: 95%;
+  		font-size: 3em;
+  	}
+
+  	.contact-content h4 {
+    	font-size: 1.875em;
+	}
 
   	.faq h2 {
   		width: 100%;
+  		font-size: 3em;
   	}
+
+  	.faq h4,
+	.faq p {
+    	font-size: 1.125em;
+    	line-height: 1;
+	}
+
 }
 
 /* ==========================================================================
