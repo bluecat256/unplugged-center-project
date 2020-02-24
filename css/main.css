@@ -340,6 +340,12 @@ aside .form{
   	margin: 0;
   	text-align: center;
 }
+
+.features i {
+  font-size: 3.75em;
+  margin-bottom: 40px;
+}
+
 /*
 .fontawesome-icon {
 
