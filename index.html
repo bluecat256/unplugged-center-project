@@ -6,6 +6,7 @@
   <title>Unplugged Retreat Center</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fafafa">
 
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
@@ -20,7 +21,6 @@
   <!-- FontAwesome CDN version 5.5 -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
-  <meta name="theme-color" content="#fafafa">
 </head>
 
 <body>
@@ -28,7 +28,6 @@
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
 
-  <!-- Add your site or application content here -->
   <!-- <p>Hello world! This is HTML5 Boilerplate.</p> =-->
 
 <header>
@@ -40,7 +39,9 @@
       </a>
     </figure>
     <div class="header-divider">
-    <!-- I don't understand whether there is supposed to be something inside this div -->      
+    <!-- I don't understand whether there is supposed to be something inside this div -->
+    <!-- looks like there isn't but then why is it here? -->   
+    <!-- just for the horizontal rule? -->   
     </div>
     <nav>
       <ul>
@@ -48,111 +49,108 @@
         <li><a href="about/index.html" target="_blank">About</a></li>
       </ul>
     </nav>
-    
   </div>
-
 </header>
  
 <main>
  
 	<section class="hero-area">
+    <div class="content-wrapper">
   		<h1>Retreat from the desk, return refreshed.</h1>
     	<!-- text above should go over the top of the "hero" image -->
+    </div>
 	</section>
  
 	<aside>
-		<div class="form-description">
-			<h2>Want to joint the next retreat?</h2>
-			<p>Find out when we are holding our next retreat and how your company or team can sign up!</p>
-		</div>
-		<div class="form">
-			<h2>Find out more</h2>
-			<input type="text" name="name" value="email address">
-			<input type="button" value="Download Itinerary">
-		</div>
+    	<div class="content-wrapper">
+			<div class="form-description">
+		    	<h3>Want to joint the next retreat?</h3>
+					<p>Find out when we are holding our next retreat and how your company or team can sign up!</p>
+			</div>
+			<div class="form">
+				<h3>Find out more</h3>
+					<input type="text" name="name" value="name@email.com">
+					<input type="button" value="Download Itinerary">
+    		</div>
+		</div> <!-- aside content wrapper close -->
 	</aside>
  
 	<section class="features">
-		<h1>Have the work week you always dreamed of - without the bad wifi.</h1>
-		<article class="features-items">
-			<p class="fontawesome-icon">
-        <i class="fas fa-campground"></i>   
-      </p>
-			<p class="features-item-description">Located in a peaceful bungalow outside of Lake Geneva, Wisconsin.</p>
-		</article>
-		<article class="features-items">
-			<p class="fontawesome-icon">
-        <i class="fas fa-bed"></i>   
-      </p>
-			<p class="features-item-description">12 private rooms with ensuite bathrooms, 2 group meeting rooms, and 4 breakout rooms</p>
-		</article>
-		<article class="features-items">
-			<p class="fontawesome-icon">
-        <i class="fas fa-utensils"></i>   
-      </p>
-			<p class="features-item-description">Private chef team providing on demand meals - just like your team kitchen.</p>
-		</article>
-		<article class="features-items">
-			<p class="fontawesome-icon">
-        <i class="fas fa-shoe-prints"></i>    
-      </p>
-			<p class="features-item-description">5 outdoor obstacle courses, including private beach 1/2 mile from bungalow.</p>
-		</article>
-		<article class="features-items">
-			<p class="fontawesome-icon">
-        <i class="fas fa-smile"></i>    
-      </p>
-			<p class="features-item-description">Retreat facilitator to manage your day to day activities so you all get a chance to reset.</p>
-		</article>
-		<article class="features-items">
-			<p class="fontawesome-icon">
-        <i class="fas fa-wifi"></i>    
-      </p>
-			<p class="features-item-description">Dedicated computer room for times that you must wifi.</p>
-		</article>
+    	<div class="content-wrapper">
+			<h2>Have the work week you always dreamed of — without the bad wifi.</h2>
+      		<div class="features-items">
+		    	<article>
+        		<p class="fontawesome-icon"><i class="fas fa-campground"></i></p>
+        		<p class="features-item-description">Located in a peaceful bungalow outside of Lake Geneva, Wisconsin.</p>
+		    	</article>
+		    	<article>
+				    <p class="fontawesome-icon"><i class="fas fa-bed"></i></p>
+		        <p class="features-item-description">12 private rooms with ensuite bathrooms, 2 group meeting rooms, and 4 breakout rooms</p>
+		    	</article>
+		    	<article>
+		        <p class="fontawesome-icon"><i class="fas fa-utensils"></i></p>
+		        <p class="features-item-description">Private chef team providing on demand meals - just like your team kitchen.</p>
+		   		</article>
+				  <article>
+				    <p class="fontawesome-icon"><i class="fas fa-shoe-prints"></i></p>
+				    <p class="features-item-description">5 outdoor obstacle courses, including private beach 1/2 mile from bungalow.</p>
+		    	</article>
+		    	<article>
+				    <p class="fontawesome-icon"><i class="fas fa-smile"></i></p>
+		        <p class="features-item-description">Retreat facilitator to manage your day to day activities so you all get a chance to reset.</p>
+		    	</article>
+		    	<article>
+		        <p class="fontawesome-icon"><i class="fas fa-wifi"></i></p>
+				    <p class="features-item-description">Dedicated computer room for times that you must wifi.</p>
+		    	</article>
+    		</div> <!-- close features-items div -->
+    	</div> <!-- close content-wrapper div -->
 	</section>
 
 	<section class="reviews">
 		<div class="content-wrapper">
-			<h2>Be a better team in 5 days, like these.</h2>
-      <figure>
-        <img src="img/omar-lopez-image.jpg" alt="My Awesome Image" />
-      </figure>
-			<article>
-				<h3>LaCrue Bottling Co. October 2017</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+			<h2>Be a better team in 5 days, like this one.</h2>
+      <article>
+        <figure>
+          <img src="img/omar-lopez-image.jpg" alt="My Awesome Image" />
+        </figure>
+        <div>
+				  <h3>LaCrue Bottling Co. October 2017</h2>
+				  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        </div>
 			</article>
 		</div>		
 	</section>
+  
 </main> <!-- main wrapper -->
  
 <footer>
   <div class="content-wrapper">
     <div class="footer-content">
-      <h2>Contact</h2>
-        <address class="contact">
+      <address class="contact">
+        <h4>Contact</h4>
           <p>555-555-5555</p>
           <p>hello@unplugged.com</p>
-        </address>
-        <div class="social">
-          <h2>Social</h2>
-            <div class="social-icons">
-              <p>
+      </address>
+      <div class="social">
+          <h4>Social</h4>
+          <div class="social-icons">
+            <p>
                 <a href="https://www.facebook.com/Skillcrush" target="_blank">
                   <i class="fab fa-facebook-f"></i>
                 </a>
-              </p>
-              <p>
+            </p>
+            <p>
                 <a href="https://www.twitter.com/Skillcrush" target="_blank">
                   <i class="fab fa-twitter"></i>
                 </a>
-              </p>
-              <p>
+            </p>
+            <p>
                 <a href="https://www.instagram.com/Skillcrush" target="_blank">
                   <i class="fab fa-instagram"></i>
                 </a>
-              </p>
-        </div> <!-- class="social-icons" div ends here -->
+            </p>
+          </div> <!-- class="social-icons" div ends here -->
       </div> <!-- class="social" div ends here -->
     </div> <!-- footer content ends --> 
   </div> <!--footer content-wrapper ends-->
@@ -168,8 +166,6 @@
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
-
-
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>

@@ -105,32 +105,35 @@ html {
 }
  
 body {
-	font-family: 'Open Sans', sans-serif;
 	font-size: 1em; 
+	font-family: 'Open Sans', sans-serif;
 	color: #e2e3ed;
 	text-align: left;
 }
  
 ul, ol {
 	list-style-type: none; 
+	margin: 0;
+	padding: 0;
 }
  
 a {
 	color: #e2e3ed;
-    text-decoration: none;
+	text-decoration: none;
 }
  
 h2 {
 	font-family: 'Poppins', sans-serif;
-	font-size: 1.875em;
 	font-weight: 500;
+	font-size: 1.875em;
+	margin: 0;
 }
  
 h3, h4 {
 	font-family: 'Poppins', sans-serif;
+	font-weight: 500;
 	font-size: 1.125em;
 	margin: 20px 0;
-	font-weight: 500;
 }
  
 p {
@@ -157,13 +160,13 @@ address {
 
 /* header and footer styles */
 
-header,
-footer {
+header, footer {
+	background-color: #202322;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-flow: row wrap;
-	background-color: #202322;
+	
 }
 
 /* header */
@@ -173,54 +176,58 @@ header {
 }
 
 header .content-wrapper{
-  /* 320/360 = 89% between the blue lines on the comp */
-  /* this one is in the .content-wrapper without header */
-  /* width: 89%; */
+	/* 320/360 = 89% between the blue lines on the comp */
+	/* this one is in the .content-wrapper without header */
+	/* width: 89%; */
+	margin: 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-flow: row wrap;
-	margin: 0;
 }
 
 header figure {
-    width: 60%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: row wrap;
+	/* 68.75% makes this much closer to the comp */
+	width: 60%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
 }
 
 .header-divider {
-  /* this horizontal rule goes all the way across the comp */
+	/* this horizontal rule goes all the way across the comp */
+	background: #3a3a3a; 
 	width: 100%;
 	height: 1px;
-  	margin: 10px 0 20px 0;
-  	background: #3a3a3a; 
+	margin: 10px 0 20px 0;
 }
 
+ /* the font weight of the "faq" and "about" text in the header nav */
+ /* looks too heavy compared to the design comp */
+ /* css matches the solution though */
+
 header nav {
-  	display: flex;
-  	justify-content: center;
-  	align-items: center;
-  	flex-flow: row wrap;
-  	width: 60%;
-  	font-size: 1.125em;
-  	font-weight: 700;
-  	text-transform: uppercase;
+	width: 60%;
+	font-size: 1.125em;
+	/* this should be 700 */
+	/* neither 700 nor bold matches comp */
+	font-weight: bold;
+	text-transform: uppercase;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
 }
 
 header nav ul {
-  	/* between the blue lines closest to the 2 parts of the ul, 160/360 = 44% */
-  	/* width: 44%; */
-  	/* above is wrong, is actually: */
-  	width: 100%;
-  	display: flex;
-  	justify-content: space-around;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
 }
 
 header nav ul li {
-  	font-size: 1.125em;
+	font-size: 1.125em;
 }
 
 /* footer */
@@ -234,6 +241,9 @@ footer p {
   	margin: 0;
 }
 
+/* the footer vertical spacing clearly doesn't match the design comp */
+/* the css matches the solution though so I don't know what the problem is */
+
 footer .content-wrapper {
   	width: 55%;
   	margin: 50px 0;
@@ -243,18 +253,6 @@ footer .contact {
   	margin-bottom: 50px;
 }
 
-/*
-footer .footer-content{
-
-}
-
-footer .social {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-*/
-
 footer .social-icons {
   	display: flex;
   	justify-content: space-around;
@@ -262,17 +260,17 @@ footer .social-icons {
 }
 
 footer .social-icons p {
-  background-color: #527158;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	background-color: #527158;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 footer .social-icons p i {
-  font-size: 1.3125em;
+	font-size: 1.3125em;
 }
 
 footer .copyright {
@@ -284,51 +282,120 @@ footer .copyright {
 /* main area styles */
 /* hero area and aside */
 
+/* cropping of hero image is wrong */
+/* even though I'm using the solution image */
+/* have NO IDEA why that is */
+
 .hero-area {
+	background: url('../img/hero-image.jpg');
+	background-size: cover;
+	background-position: center;
+	min-height: 500px;
 	display: flex;
 	justify-content: center;
 	flex-flow: row wrap;
-	background: url('../img/hero-image.jpg') center no-repeat #333;
-	background-size: cover;
 }
+
+/* this text looks too heavy to match the comp */
 
 .hero-area h1 {
-  	font-size: 2.25em;
-  	font-family: 'Poppins', Helvetica, Arial, sans-serif;
-  	font-weight: 500; 
-  	line-height: 1.2; 
+	font-size: 2.25em;
+	font-family: 'Poppins', Helvetica, Arial, sans-serif;
+	font-weight: 500; 
+	line-height: 1.2; 
+	/* this is to turn off interference from "user agent stylesheet" in Chrome */
+	/* which makes the vertical spacing very different from the comp */
+	/*
+	margin-block-start: 0em;
+	margin-block-end: 0em;
+	*/
 }
+
+/* vertical spacing of text in aside is clearly wrong */
+/* my css seems to match solution */
+/* think I've deactivated interfering user agent stylesheet */
+/* not sure what else to try */
 
 aside {
-  	display: flex;
-  	justify-content: center;
-  	align-items: center;
-  	flex-flow: row wrap;
-  	background-color: #527158;
-}
-
-aside .form{
-  	margin-top: 30px;
-}
-
-/*
-.form-description {
-
-}
-*/
-
-/*features */
-.features {
+	background-color: #527158;
 	display: flex;
 	justify-content: center;
- 	flex-flow: row wrap;
- 	background: url('../img/rawpixel-image.jpg') center no-repeat #333;
+	align-items: center;
+	flex-flow: row wrap;
+}
+
+/* added these to match comp but solution doesn't have them */
+/* adding this one */
+/*aside .content-wrapper {
+  margin: 20px 0 55px 0;
+}*/
+
+/*aside h3 {
+   this is to turn off interference from "user agent stylesheet" in Chrome 
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}*/
+
+/*aside p {
+  /* this is to turn off interference from "user agent stylesheet" in Chrome */
+  /*margin-block-start: 0em;
+  margin-block-end: 0em;*/
+  /*margin-inline-start: 0em;
+  margin-inline-end: 0em;*/
+/* } */
+
+aside .form {
+    margin-top: 30px;
+}
+
+/* form input */
+/* these were copied and pasted as indicated in instructions */
+
+input[type=text] {
+  box-sizing: border-box;
+  width: 100%;
+  color: #2a423a;
+  font-style: italic;
+  padding: 1em;
+}
+ 
+input[type=button] {
+  width: 100%;
+  padding: 20px 0;
+  margin-top: 20px;
+  background-color: #2a423a;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 1.125em;
+  color: #e2e3ed;
+  border: none;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/*features */
+
+/* vertical spacing below text of features header is clearly wrong */
+/* font size or weight of header looks wrong too */
+/* font size or weight of features themselves also looks wrong */
+/* my css seems to match solution though */
+
+.features {
+ 	background: url('../img/rawpixel-image.jpg');
 	background-size: cover;
+	background-position: center;
+	display: flex;
+	justify-content: center;
+	flex-flow: row wrap;
 }
 
 .features h2 {
-  	margin-bottom: 60px;
+	margin-bottom: 60px;
+	/* this makes it match comp better but isn't in solution */
+	/*margin-block-start: 0em;
+	margin-block-end: 0em;*/
 }
+
 .features article {
   	width: 63%;
   	margin: 30px 0;
@@ -344,51 +411,54 @@ aside .form{
   	flex-flow: row wrap;
 }
 
-.features p {
-  	margin: 0;
-  	text-align: center;
-}
-
 .features i {
-  font-size: 3.75em;
-  margin-bottom: 40px;
+	font-size: 3.75em;
+	margin-bottom: 40px;
 }
 
-/*
-.fontawesome-icon {
-
+.features p {
+	text-align: center;
+	margin: 0;
 }
-.features-items-descriptions{
 
-}
-*/
 /* Reviews */
+
+/* cropping and size of image is clearly wrong */
+/* font size or weight looks wrong for header and for paragraph */
+
 .reviews {
-  	display: flex;
-  	justify-content: center;
-  	flex-flow: row wrap;
-  	background-color: #2a423a;
+	background-color: #2a423a;
+	display: flex;
+	justify-content: center;
+	flex-flow: row wrap;
 }
 
 .reviews h2 {
-  	margin-bottom: 40px;
-  	line-height: 1;
+	margin-bottom: 40px;
+	line-height: 1;
+	/*margin-block-start: 0em;
+	margin-block-end: 0em;*/
 }
 
 .reviews h3 {
-  /* text box is 320/360=89% */
-  /* wrong */
-  	width: 55%;
-  	margin: 20px 0;
+	/* text box is 320/360=89% */
+	/* wrong */
+	width: 55%;
+	margin: 20px 0;
+	/*margin-block-start: 0em;
+	margin-block-end: 0em;*/
 }
 
 /* styles for About page (instead of Home page) */
+
+/* the wrapping of the h? is different than the solution */
+
 .mission {
-	background-color: #527158;
-  	display: flex;
-  	justify-content: center;
-  	align-items: center;
-  	flex-flow: row wrap;
+  background-color: #527158;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
 }
 
 .contact-section {
@@ -402,6 +472,8 @@ aside .form{
 .contact-content p {
   	margin: 0;
 }
+
+/* the map looks a little different but the iframe is set for a different location... */
 
 .map figure {
   width: 100%;
@@ -533,30 +605,6 @@ aside .form{
   clear: both;
 }
 
-/* form input */
-
-input[type=text] {
-  box-sizing: border-box;
-  width: 100%;
-  color: #2a423a;
-  font-style: italic;
-  padding: 1em;
-}
- 
-input[type=button] {
-  width: 100%;
-  padding: 20px 0;
-  margin-top: 20px;
-  background-color: #2a423a;
-  font-family: 'Poppins', Helvetica, Arial, sans-serif;
-  font-weight: 500;
-  font-size: 1.125em;
-  color: #e2e3ed;
-  border: none;
-  text-align: center;
-  text-transform: uppercase;
-}
-
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
    These examples override the primary ('mobile first') styles.
@@ -566,7 +614,7 @@ input[type=button] {
 @media only screen and (min-width: 768px) {
   /* tablet styles here */
 
-  /* home page */
+  /* general styles of tablet styles */
 
   .content-wrapper {
   	max-width: 640px;
@@ -582,6 +630,8 @@ input[type=button] {
       font-size: 1.5em;
       line-height: 1.25;
   }
+
+  /* header styles of tablet styles */
 
   header {
   	justify-content: space-around;
@@ -606,8 +656,12 @@ input[type=button] {
   }
 
   .header-divider {
-  	display: none
+  	display: none;
   }
+
+  /* home page of tablet styles */
+
+  /* hero area of tablet styles */
 
   .hero-area {
     min-height: 600px;
@@ -618,6 +672,8 @@ input[type=button] {
     line-height: 1;
     margin: 0;
 	}
+
+  /* aside area of tablet styles */
 
   aside .content-wrapper {
   	margin: 50px 0;
@@ -632,7 +688,9 @@ input[type=button] {
   	margin: 0;
   }
 
- .features h2 {
+  /* features area of tablet styles */
+
+  .features h2 {
     margin-bottom: 20px;
   }
 
@@ -645,8 +703,14 @@ input[type=button] {
   }
 
   .features .features-item-description {
-  	width: 60%;
+  	width: 62%;
   }
+
+  .features i {
+    margin-bottom: 30px;
+  }
+
+  /* reviews area of tablet styles */
 
   .reviews article {
   	display: flex;
@@ -659,7 +723,7 @@ input[type=button] {
 
   .reviews article figure,
   .reviews article div {
-  	width: 50%;
+  	width: 49%;
   }
 
  .reviews h3 {
@@ -667,9 +731,11 @@ input[type=button] {
     margin: 0;
   }
 
+  /* footer area of tablet styles */
+
   footer .content-wrapper {
-  	width: 65%
-  	margin: 100px 0;
+  	width: 65%;
+    margin: 100px 0;
   }
 
   footer .footer-content {
@@ -689,24 +755,33 @@ input[type=button] {
   }
 
   footer p {
-      line-height: 1.285;
+    line-height: 1.285;
+  }
+
+  footer .social-icons {
+    width: 12.5em;
+    justify-content: space-between;
   }
 
   footer .copyright {
-  	width: 100%
+  	width: 100%;
   }
 
-/* about page */
+  /* about page area of tablet styles */
 
   .mission-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 20px
+    padding-top: 20px;
   }
-  
+
   .mission-content p {
     width: 45%;
+  }
+
+  .map figure {
+    padding-bottom: 45.6%; 
   }
   
   .contact-section .content-wrapper h2 {
@@ -723,11 +798,7 @@ input[type=button] {
     font-size: 1.5em;
   }
 
-  .map figure {
-    padding-bottom: 45.6%; 
-  }
-
-/* faq page */
+  /* faq page of tablet styles */
 
   .faq .content-wrapper {
     justify-content: space-between;
@@ -755,6 +826,10 @@ input[type=button] {
   header {
     padding: 15px 0;
   }
+
+  .content-wrapper {
+    max-width: 960px;
+  }
   
   h2 {
     font-size: 2.25em;
@@ -770,17 +845,17 @@ input[type=button] {
     line-height: 1.333;
   }
 
+  /* hero area of desktop styles */
+
+  /*
   .hero-area {
     min-height: 775px;
   }
-
- 	.content-wrapper {
- 		max-width: 960px;
- 	}
-
+*/
+ 	
  	.hero-area h1 {
  		font-size: 3.75em;
- 		width: 60%;
+ 		width: 80%;
  	}
 
  	aside .content-wrapper {
@@ -790,55 +865,55 @@ input[type=button] {
  	aside .content-wrapper .form-description,
  	aside .content-wrapper .form {
     width: 30%;
-  	}
+  }
 	
 	.form-description p {
     font-size: 1.125em;
-  	}
+  }
   	
-  	.features h2 {
-  		width: 90%;
-  	}
+  .features h2 {
+  	width: 90%;
+  }
 
-  	.features article {
-  		flex-basis: 33%;
-  	}
+  .features article {
+  	flex-basis: 33%;
+  }
 
-  	.reviews article div {
-  		width: 42%;
-  	}
+  .reviews article div {
+  	width: 42%;
+  }
 
 	.reviews h2 {
     padding-bottom: 50px;
-  	}
+  }
 
-  	footer h4 {
+  footer h4 {
     font-size: 1.875em;
-  	}
+  }
   	
-  	.mission h2,
-  	.contact-section .content-wrapper h2 {
-  		width: 95%;
-  		font-size: 3em;
-  	}
+  .mission h2,
+  .contact-section .content-wrapper h2 {
+  	width: 95%;
+  	font-size: 3em;
+  }
 
-  	.contact-content h4 {
-    	font-size: 1.875em;
+  .contact-content h4 {
+    font-size: 1.875em;
 	}
 
   .map figure {
     padding-bottom: 37.5%; 
   }
 
-  	.faq h2 {
-  		width: 100%;
-  		font-size: 3em;
-  	}
+  .faq h2 {
+  	width: 100%;
+  	font-size: 3em;
+  }
 
-  	.faq h4,
+  .faq h4,
 	.faq p {
-    	font-size: 1.125em;
-    	line-height: 1;
+    font-size: 1.125em;
+    line-height: 1;
 	}
 
 }
