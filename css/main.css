@@ -98,10 +98,21 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+/* I've tried repeatedly to fix the vertical spacings that don't match the comp */
+/* but I'm not sure what's wrong or really how close my pages are supposed to be */
+/* to the design comp. My code looks the same in all the browsers I've checked */
+/* as the "solution"... */
+
 /* general styles */
 
 html {
-	font-size: 16px;	
+	font-size: 16px;
+  /* this is to turn off interference from "user agent stylesheet" in Chrome */
+  /* which makes the vertical spacing very different from the comp */
+  
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  
 }
  
 body {
@@ -109,6 +120,12 @@ body {
 	font-family: 'Open Sans', sans-serif;
 	color: #e2e3ed;
 	text-align: left;
+  /* this is to turn off interference from "user agent stylesheet" in Chrome */
+  /* which makes the vertical spacing very different from the comp */
+
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+
 }
  
 ul, ol {
@@ -121,12 +138,27 @@ a {
 	color: #e2e3ed;
 	text-decoration: none;
 }
+
+h1 {
+  /* this is to turn off interference from "user agent stylesheet" in Chrome */
+  /* which makes the vertical spacing very different from the comp */
+
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+
+}
  
 h2 {
 	font-family: 'Poppins', sans-serif;
 	font-weight: 500;
 	font-size: 1.875em;
 	margin: 0;
+  /* this is to turn off interference from "user agent stylesheet" in Chrome */
+  /* which makes the vertical spacing very different from the comp */
+
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+
 }
  
 h3, h4 {
@@ -134,11 +166,21 @@ h3, h4 {
 	font-weight: 500;
 	font-size: 1.125em;
 	margin: 20px 0;
+  /* this is to turn off interference from "user agent stylesheet" in Chrome */
+  /* which makes the vertical spacing very different from the comp */
+
+  margin-block-start: 0em;
+  margin-block-end: 0em;
 }
  
 p {
 	font-size: 0.875em;
 	line-height: 1.285em;	
+  /* this is to turn off interference from "user agent stylesheet" in Chrome */
+  /* which makes the vertical spacing very different from the comp */
+
+  margin-block-start: 0em;
+  margin-block-end: 0em;
 }
 
 img {
@@ -156,6 +198,12 @@ address {
 .content-wrapper {
 	width: 90%;
 	margin: 50px 0;
+  /* this is to turn off interference from "user agent stylesheet" in Chrome */
+  /* which makes the vertical spacing very different from the comp */
+  /*
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  */
 }
 
 /* header and footer styles */
@@ -274,7 +322,7 @@ footer .social-icons p i {
 }
 
 footer .copyright {
-  	margin: 20px 0;
+  margin: 20px 0;
 }
 
 /* Mobile styles for home page */
